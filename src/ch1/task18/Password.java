@@ -1,29 +1,15 @@
 package ch1.task18;
 
-import java.util.Scanner;
-
 public class Password {
 
-    static private String password = "123456";
-    static private String yourPassword;
+    static public String password = "123456";
+    static public String yourPassword;
 
-    public String getYourPassword() {
-        return yourPassword;
-    }
-
-    public void setYourPassword(String password) {
-        if (yourPassword == null) {
-            yourPassword = "";
-        } else {
-            this.yourPassword = yourPassword;
-        }
-    }
-    
-    public boolean equals(String str) {
+    public static boolean equals(String str) {
         return (yourPassword == null ? null : password.equals(yourPassword));
     }
 
-    public void ComparePasswords(String yourPassword) {
+    public static void comparePasswords(int yourPassword) {
         if (password.equals(yourPassword)) {
             System.out.println("Your Password is true");
         } else {
@@ -31,4 +17,8 @@ public class Password {
         }
     }
 
+    public static void main(String[] args) {
+        int length = Integer.parseInt(args[0]);
+        comparePasswords(length);
+    }
 }
