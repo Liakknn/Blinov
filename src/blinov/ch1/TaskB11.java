@@ -27,7 +27,7 @@ public class TaskB11 {
     private static int[] luckyMas(int[] mas) {
         int[] newArray = new int[0];
         for (int i = 0; i < mas.length; i++) {
-            if (lucky(mas[i]) == true) {
+            if (lucky(mas[i])) {
                 newArray = MyUtils.addToArray(newArray, mas[i]);
             }
         }

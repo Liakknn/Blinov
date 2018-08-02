@@ -8,9 +8,7 @@ public class TaskB06 {
         int dozen = Math.abs(number / 10) % 10;
         int unit = Math.abs(number) % 10;
         if (Math.abs(number) >= 100 && Math.abs(number) <= 999) {
-            if (hundred != dozen && unit != dozen && unit != hundred) {
-                return true;
-            }
+            return hundred != dozen && unit != dozen && unit != hundred;
         }
         return false;
     }
@@ -18,7 +16,7 @@ public class TaskB06 {
     private static int[] three(int[] data) {
         int[] answer = new int[0];
         for (int i = 0; i < data.length; i++) {
-            if (test(data[i]) == true) {
+            if (test(data[i])) {
                 answer = MyUtils.addToArray(answer, data[i]);
             }
         }

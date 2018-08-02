@@ -1,4 +1,4 @@
-package blinov.ch1;
+package  blinov.ch1;
 
 import java.util.Random;
 
@@ -9,7 +9,7 @@ public class TaskA3 {
         for (int i = 0; i < length; i++) {
             System.out.print(r.nextInt(100));
             if (i != length - 1) {
-                if (r.nextBoolean() == true) {
+                if (r.nextBoolean()) {
                     System.out.println();
                 } else {
                     System.out.print(" ");

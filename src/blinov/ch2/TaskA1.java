@@ -2,15 +2,12 @@ package blinov.ch2;
 
 import blinov.MyUtils;
 
-import java.util.Arrays;
-import java.util.Random;
-
 public class TaskA1 {
     /**
-     * Возвращает все числа минимальной длины.
+     * Возвращает все числа максимальной длины.
      *
      * @param mas Входной массив чисел.
-     * @return Все числа минимальной длины.
+     * @return Все числа максимальной длины.
      */
     private static int[] max(int[] mas) {
         int[] newArray = new int[0];
@@ -29,6 +26,12 @@ public class TaskA1 {
         return newArray;
     }
 
+    /**
+     * Возвращает все числа минимальной длины.
+     *
+     * @param mas Входной массив чисел.
+     * @return Все числа минимальной длины.
+     */
     private static int[] min(int[] mas) {
         int[] newArray = new int[0];
         int min = mas[0];
