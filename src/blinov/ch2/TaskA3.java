@@ -4,16 +4,25 @@ import blinov.MyUtils;
 
 public class TaskA3 {
 
-    public static double average(int [] mas) {
-        int count = 0;
+    /**
+     * Метод, который возвразщает среднее значение длины цифр в массиве
+     * @param mas входной массив
+     * @return среднее значение длины цифр в массиве
+     */
+    private static double average(int [] mas) {
         int sum = 0;
         for(int i = 0; i < mas.length; i++) {
             sum += MyUtils.getDigitCount(mas[i]);
-            count++;
         }
-        return (double) sum / count;
+        return (double) sum / mas.length;
     }
 
+    /**
+     *
+     * @param mas
+     * @param average
+     * @return
+     */
     private static int[] lessAverage(int[] mas, double average) {
         int[] newArray = new int[0];
         for (int i = 0; i < mas.length; i++) {

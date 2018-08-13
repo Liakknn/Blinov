@@ -4,7 +4,7 @@ import blinov.MyUtils;
 
 public class TaskA4 {
 
-    public static int countNumber(int number) {
+    private static int countNumber(int number) {
         boolean[] mas = new boolean[10];
         int count = 0;
         int numberC = MyUtils.getDigitCount(number);
@@ -18,10 +18,11 @@ public class TaskA4 {
         return count;
     }
 
-    public static int minCount(int [] data) {
+    private static int minCount(int [] data) {
         int min = data[0];
+        int count = countNumber(data[0]);
         for(int i = 1; i < data.length; i++) {
-            if(countNumber(data[i]) < countNumber(min)) {
+            if(countNumber(data[i]) < count) {
                 min = data[i];
             }
         }
